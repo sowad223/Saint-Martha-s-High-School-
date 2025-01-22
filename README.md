@@ -18,20 +18,4 @@ Welcome to the official repository for the **Saint Martha's Junior High School, 
 8. **Batch Photo**: A section dedicated to showcasing a batch photo with a nostalgic message.
 9. **Background Image**: A beautiful background image that enhances the overall design.
 
----
-
-## **Folder Structure**
-school-website/
-│
-├── index.html # Main HTML file
-├── styles.css # CSS file for styling
-├── script.js # JavaScript file for interactivity
-└── images/ # Folder for all images
-├── logo.png # School logo
-├── extrac.jpg # Extracurricular activity image
-├── extra.jpg # Classroom image
-├── extra3.jpg # Sports day image
-├── batch-photo.jpg # Batch photo
-└── background.jpg # Background image
-
 
