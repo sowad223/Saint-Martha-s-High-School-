@@ -13,7 +13,7 @@
     <div class="logo">
       <img src="images/logo.jpg" alt="School Logo" class="school-logo">
       <h1>Saint Martha's Junior High School, Sreemangal</h1>
-      <p>   "Learning for Life"</p>
+      <p>Motto: "Learning for Life"</p>
     </div>
     <nav>
       <ul>
@@ -24,6 +24,7 @@
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#reviews">Teacher Reviews</a></li>
         <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#admission">Admission</a></li>
       </ul>
     </nav>
   </header>
@@ -81,7 +82,7 @@
   <section id="gallery" class="gallery">
     <h2>Gallery</h2>
     <div class="gallery-images">
-      <img src="images/extrac.jpg" alt="School Event">
+      <img src="images/extrac.jpg" alt="Extracurricular Activity">
       <img src="images/extra.jpg" alt="Classroom">
       <img src="images/extra3jpg.jpg" alt="Sports Day">
     </div>
@@ -114,14 +115,58 @@
     </div>
   </section>
 
+  <!-- Admission Form -->
+  <section id="admission" class="admission">
+    <h2>Admission Form</h2>
+    <form id="admissionForm">
+      <input type="text" id="studentName" placeholder="Student's Name" required>
+      <input type="text" id="parentName" placeholder="Parent's Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="address" placeholder="Address" required>
+      <button type="submit">Submit & Download Form</button>
+    </form>
+  </section>
+
+  <!-- Announcements -->
+  <section id="announcements" class="announcements">
+    <h2>Announcements</h2>
+    <div class="announcement-list">
+      <div class="announcement">
+        <h3>School Reopening</h3>
+        <p>Date: January 1, 2024</p>
+        <p>We are excited to welcome students back to school!</p>
+      </div>
+      <div class="announcement">
+        <h3>Parent-Teacher Meeting</h3>
+        <p>Date: January 15, 2024</p>
+        <p>All parents are invited to attend the meeting.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-list">
+      <div class="testimonial">
+        <p>"Saint Martha's has been a second home for my child. The teachers are amazing!"</p>
+        <h4>- Parent of a Student</h4>
+      </div>
+      <div class="testimonial">
+        <p>"I learned so much during my time here. The extracurricular activities are fantastic!"</p>
+        <h4>- Alumni</h4>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Us -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <div class="contact-info">
       <p><i class="fas fa-map-marker-alt"></i> School Address: Sreemangal, Moulvibazar, Bangladesh</p>
       <p><i class="fas fa-phone"></i> Phone: +880 01782510223</p>
-      <p><i class="fas fa-envelope"></i> Email: marthasaint@gmail.com
-      </p>
+      <p><i class="fas fa-envelope"></i> Email: marthasaint@gmail.com</p>
     </div>
     <form>
       <input type="text" placeholder="Your Name" required>
@@ -131,22 +176,15 @@
     </form>
   </section>
 
-  <!-- Batch Photo Section -->
-  <section id="batch-photo" class="batch-photo">
-    <h2>Our Batch</h2>
-    <img src="images/batch-photo.jpg" alt="Batch Photo">
-    <p class="nostalgic-line">If only we could go back in time...</p>
-  </section>
-
   <!-- Footer -->
   <footer>
     <p>&copy; 2023 Saint Martha's Junior High School, Sreemangal. All rights reserved.</p>
     <div class="social-links">
-      <a href="#"><i class="https://www.facebook.com/profile.php?id=100063787398602"></i></a>
-
+      <a href="https://www.facebook.com/profile.php?id=100063787398602" target="_blank"><i class="fab fa-facebook"></i></a>
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
