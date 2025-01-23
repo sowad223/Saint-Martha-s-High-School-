@@ -6,7 +6,6 @@
   <title>Saint Martha's Junior High School, Sreemangal</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Add jsPDF Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
@@ -27,6 +26,7 @@
         <li><a href="#reviews">Teacher Reviews</a></li>
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#admission">Admission</a></li>
+        <li><a href="#resources">Resources</a></li>
       </ul>
     </nav>
   </header>
@@ -126,63 +126,165 @@
   <section id="admission" class="admission">
     <h2>Admission Form</h2>
     <form id="admissionForm">
-      <input type="text" id="studentName" placeholder="Student's Name" required>
-      <input type="text" id="parentName" placeholder="Parent's Name" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-      <input type="text" id="address" placeholder="Address" required>
+      <div class="form-group">
+        <label for="studentName">Student's Name</label>
+        <input type="text" id="studentName" placeholder="Enter student's name" required>
+      </div>
+      <div class="form-group">
+        <label for="parentName">Parent's Name</label>
+        <input type="text" id="parentName" placeholder="Enter parent's name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" placeholder="Enter address" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="class">Class Applying For</label>
+        <select id="class" required>
+          <option value="">Select Class</option>
+          <option value="Class 1">Class 1</option>
+          <option value="Class 2">Class 2</option>
+          <option value="Class 3">Class 3</option>
+          <option value="Class 4">Class 4</option>
+          <option value="Class 5">Class 5</option>
+          <option value="Class 6">Class 6</option>
+          <option value="Class 7">Class 7</option>
+          <option value="Class 8">Class 8</option>
+          <option value="Class 9">Class 9</option>
+          <option value="Class 10">Class 10</option>
+        </select>
+      </div>
       <button type="submit">Submit & Download Form</button>
     </form>
   </section>
 
-  <!-- Announcements -->
-  <section id="announcements" class="announcements">
-    <h2>Announcements</h2>
-    <div class="announcement-list">
-      <div class="announcement">
-        <i class="fas fa-bullhorn announcement-icon"></i>
-        <h3>School Reopening</h3>
-        <p>Date: January 1, 2024</p>
-        <p>We are excited to welcome students back to school!</p>
+  <!-- Resources Section -->
+  <section id="resources" class="resources">
+    <h2>Resources</h2>
+    <p>Access subject-wise lectures and study materials for Class 1 to Class 10.</p>
+    <div class="resource-list">
+      <!-- Class 1 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 1</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=3tmd-ClpJxA" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
       </div>
-      <div class="announcement">
-        <i class="fas fa-users announcement-icon"></i>
-        <h3>Parent-Teacher Meeting</h3>
-        <p>Date: January 15, 2024</p>
-        <p>All parents are invited to attend the meeting.</p>
+      <!-- Class 2 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 2</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=YQHsXMglC9A" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=fRh_vgS2dFE" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=hT_nvWreIhg" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
+      </div>
+      <!-- Class 3 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 3</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=OPf0YbXqDm0" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=CevxZvSJLk8" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=9bZkp7q19f0" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
+      </div>
+      <!-- Class 4 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 4</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=RgKAFK5djSk" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=hT_nvWreIhg" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
+      </div>
+      <!-- Class 5 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 5</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=YQHsXMglC9A" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=fRh_vgS2dFE" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=3tmd-ClpJxA" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
+      </div>
+      <!-- Class 6 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 6</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=9bZkp7q19f0" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
+      </div>
+      <!-- Class 7 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 7</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=OPf0YbXqDm0" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=CevxZvSJLk8" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=hT_nvWreIhg" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
+      </div>
+      <!-- Class 8 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 8</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=RgKAFK5djSk" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=3tmd-ClpJxA" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
+      </div>
+      <!-- Class 9 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 9</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=YQHsXMglC9A" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=fRh_vgS2dFE" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=hT_nvWreIhg" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
+      </div>
+      <!-- Class 10 -->
+      <div class="resource">
+        <i class="fas fa-book-open resource-icon"></i>
+        <h3>Class 10</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fas fa-video"></i> Mathematics</a></li>
+          <li><a href="https://www.youtube.com/watch?v=JGwWNGJdvx8" target="_blank"><i class="fas fa-video"></i> English</a></li>
+          <li><a href="https://www.youtube.com/watch?v=9bZkp7q19f0" target="_blank"><i class="fas fa-video"></i> Science</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial-list">
-      <div class="testimonial">
-        <p>"Saint Martha's has been a second home for my child. The teachers are amazing!"</p>
-        <h4>- Parent of a Student</h4>
-      </div>
-      <div class="testimonial">
-        <p>"I learned so much during my time here. The extracurricular activities are fantastic!"</p>
-        <h4>- Alumni</h4>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Us -->
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-info">
-      <p><i class="fas fa-map-marker-alt"></i> School Address: Sreemangal, Moulvibazar, Bangladesh</p>
-      <p><i class="fas fa-phone"></i> Phone: +880 01782510223</p>
-      <p><i class="fas fa-envelope"></i> Email: marthasaint@gmail.com</p>
-    </div>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
   </section>
 
   <!-- Batch Photo Section -->

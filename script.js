@@ -63,45 +63,46 @@ function deleteReview(index) {
 // Load Reviews on Page Load
 loadReviews();
 
-// Admission Form - Generate PDF
+// Admission Form - Print to PDF
 const admissionForm = document.getElementById('admissionForm');
 admissionForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  // Check if jsPDF is loaded
-  if (typeof jsPDF !== 'undefined') {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+  // Create a printable version of the form data
+  const printContent = `
+    <h2>Saint Martha's Junior High School</h2>
+    <h3>Admission Form</h3>
+    <p><strong>Student's Name:</strong> ${document.getElementById('studentName').value}</p>
+    <p><strong>Parent's Name:</strong> ${document.getElementById('parentName').value}</p>
+    <p><strong>Email:</strong> ${document.getElementById('email').value}</p>
+    <p><strong>Phone:</strong> ${document.getElementById('phone').value}</p>
+    <p><strong>Address:</strong> ${document.getElementById('address').value}</p>
+    <p><strong>Date of Birth:</strong> ${document.getElementById('dob').value}</p>
+    <p><strong>Gender:</strong> ${document.getElementById('gender').value}</p>
+    <p><strong>Class Applying For:</strong> ${document.getElementById('class').value}</p>
+  `;
 
-    // Form Data
-    const studentName = document.getElementById('studentName').value;
-    const parentName = document.getElementById('parentName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const address = document.getElementById('address').value;
-
-    // Add School Name and Title
-    doc.setFontSize(18);
-    doc.setFont('helvetica', 'bold');
-    doc.text("Saint Martha's Junior High School", 10, 20);
-    doc.setFontSize(14);
-    doc.text("Admission Form", 10, 30);
-
-    // Form Details
-    doc.setFontSize(12);
-    doc.setFont('helvetica', 'normal');
-    doc.text(`Student's Name: ${studentName}`, 10, 50);
-    doc.text(`Parent's Name: ${parentName}`, 10, 60);
-    doc.text(`Email: ${email}`, 10, 70);
-    doc.text(`Phone: ${phone}`, 10, 80);
-    doc.text(`Address: ${address}`, 10, 90);
-
-    // Add a Border
-    doc.rect(5, 5, 200, 287); // A4 size border
-
-    // Save the PDF
-    doc.save('admission_form.pdf');
-  } else {
-    alert('Error: jsPDF library not loaded. Please check your internet connection.');
-  }
+  // Open a new window with the printable content
+  const printWindow = window.open('', '', 'height=600,width=800');
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Admission Form</title>
+        <style>
+          body { font-family: Arial, sans-serif; padding: 20px; }
+          h2, h3 { color: #333; }
+          p { margin: 10px 0; }
+        </style>
+      </head>
+      <body>
+        ${printContent}
+        <script>
+          window.onload = function() {
+            window.print(); // Automatically trigger the print dialog
+          };
+        </script>
+      </body>
+    </html>
+  `);
+  printWindow.document.close();
 });
