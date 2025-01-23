@@ -67,21 +67,41 @@ loadReviews();
 const admissionForm = document.getElementById('admissionForm');
 admissionForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
 
-  const studentName = document.getElementById('studentName').value;
-  const parentName = document.getElementById('parentName').value;
-  const email = document.getElementById('email').value;
-  const phone = document.getElementById('phone').value;
-  const address = document.getElementById('address').value;
+  // Check if jsPDF is loaded
+  if (typeof jsPDF !== 'undefined') {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
 
-  doc.text("Admission Form", 10, 10);
-  doc.text(`Student's Name: ${studentName}`, 10, 20);
-  doc.text(`Parent's Name: ${parentName}`, 10, 30);
-  doc.text(`Email: ${email}`, 10, 40);
-  doc.text(`Phone: ${phone}`, 10, 50);
-  doc.text(`Address: ${address}`, 10, 60);
+    // Form Data
+    const studentName = document.getElementById('studentName').value;
+    const parentName = document.getElementById('parentName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
 
-  doc.save('admission_form.pdf');
+    // Add School Name and Title
+    doc.setFontSize(18);
+    doc.setFont('helvetica', 'bold');
+    doc.text("Saint Martha's Junior High School", 10, 20);
+    doc.setFontSize(14);
+    doc.text("Admission Form", 10, 30);
+
+    // Form Details
+    doc.setFontSize(12);
+    doc.setFont('helvetica', 'normal');
+    doc.text(`Student's Name: ${studentName}`, 10, 50);
+    doc.text(`Parent's Name: ${parentName}`, 10, 60);
+    doc.text(`Email: ${email}`, 10, 70);
+    doc.text(`Phone: ${phone}`, 10, 80);
+    doc.text(`Address: ${address}`, 10, 90);
+
+    // Add a Border
+    doc.rect(5, 5, 200, 287); // A4 size border
+
+    // Save the PDF
+    doc.save('admission_form.pdf');
+  } else {
+    alert('Error: jsPDF library not loaded. Please check your internet connection.');
+  }
 });

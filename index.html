@@ -6,6 +6,8 @@
   <title>Saint Martha's Junior High School, Sreemangal</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Add jsPDF Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -49,14 +51,17 @@
     <h2>Our Programs</h2>
     <div class="program-list">
       <div class="program">
+        <img src="https://img.icons8.com/color/96/000000/school-building.png" alt="Primary Education Icon">
         <h3>Primary Education</h3>
         <p>Building a strong foundation for young learners.</p>
       </div>
       <div class="program">
+        <img src="https://img.icons8.com/color/96/000000/student-male.png" alt="Secondary Education Icon">
         <h3>Secondary Education</h3>
         <p>Preparing students for academic excellence.</p>
       </div>
       <div class="program">
+        <img src="https://img.icons8.com/color/96/000000/football2--v1.png" alt="Extracurricular Activities Icon">
         <h3>Extracurricular Activities</h3>
         <p>Encouraging creativity and teamwork.</p>
       </div>
@@ -68,10 +73,12 @@
     <h2>Upcoming Events</h2>
     <div class="event-list">
       <div class="event">
+        <i class="fas fa-running event-icon"></i>
         <h3>Annual Sports Day</h3>
         <p>Date: October 15, 2025</p>
       </div>
       <div class="event">
+        <i class="fas fa-flask event-icon"></i>
         <h3>Science Fair</h3>
         <p>Date: November 10, 2025</p>
       </div>
@@ -133,11 +140,13 @@
     <h2>Announcements</h2>
     <div class="announcement-list">
       <div class="announcement">
+        <i class="fas fa-bullhorn announcement-icon"></i>
         <h3>School Reopening</h3>
         <p>Date: January 1, 2024</p>
         <p>We are excited to welcome students back to school!</p>
       </div>
       <div class="announcement">
+        <i class="fas fa-users announcement-icon"></i>
         <h3>Parent-Teacher Meeting</h3>
         <p>Date: January 15, 2024</p>
         <p>All parents are invited to attend the meeting.</p>
@@ -176,6 +185,13 @@
     </form>
   </section>
 
+  <!-- Batch Photo Section -->
+  <section id="batch-photo" class="batch-photo">
+    <h2>Built by BATCH 18</h2>
+    <img src="images/batch-photo.jpg" alt="Batch Photo">
+    <p class="nostalgic-line">"If only we could go back in time..."</p>
+  </section>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2023 Saint Martha's Junior High School, Sreemangal. All rights reserved.</p>
@@ -184,7 +200,6 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -194,35 +194,79 @@ footer {
   color: #f1c40f;
 }
 
-/* Admission Form */
-.admission {
+/* Announcements Section */
+.announcements {
   background: rgba(255, 255, 255, 0.9);
   padding: 50px 20px;
 }
 
-.admission form {
-  max-width: 500px;
-  margin: 0 auto;
+.announcement-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.admission form input {
+.announcement {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.announcement-icon {
+  font-size: 3rem;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+/* Events Section */
+.events {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px 20px;
+}
+
+.event-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.event {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.event-icon {
+  font-size: 3rem;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+/* Batch Photo Section */
+.batch-photo {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.batch-photo img {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  max-width: 800px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
-.admission form button {
-  background: #e67e22;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.admission form button:hover {
-  background: #d35400;
+.nostalgic-line {
+  font-style: italic;
+  color: #555;
+  margin-top: 20px;
+  font-size: 1.2rem;
 }
