@@ -6,7 +6,6 @@
   <title>Saint Martha's Junior High School, Sreemangal</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -27,6 +26,7 @@
         <li><a href="#contact">Contact Us</a></li>
         <li><a href="#admission">Admission</a></li>
         <li><a href="#resources">Resources</a></li>
+        <li><a href="#payment-options">Payment</a></li>
       </ul>
     </nav>
   </header>
@@ -179,6 +179,53 @@
     </form>
   </section>
 
+  <!-- Payment Options -->
+  <section id="payment-options" class="payment-options">
+    <h2>Payment Options</h2>
+    <div class="payment-methods">
+      <div class="payment-method">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>bKash</h3>
+        <p>Pay via bKash: 01234567890</p>
+      </div>
+      <div class="payment-method">
+        <i class="fas fa-credit-card"></i>
+        <h3>Credit Card</h3>
+        <p>Pay securely with your credit card.</p>
+      </div>
+      <div class="payment-method">
+        <i class="fas fa-university"></i>
+        <h3>Bank Transfer</h3>
+        <p>Bank: XYZ Bank, Account: 123456789</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><i class="fas fa-map-marker-alt"></i> Address: Sreemangal, Moulvibazar, Bangladesh</p>
+      <p><i class="fas fa-phone"></i> Phone: +880 1234 567890</p>
+      <p><i class="fas fa-envelope"></i> Email: info@saintmarthas.edu</p>
+    </div>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
   <!-- Resources Section -->
   <section id="resources" class="resources">
     <h2>Resources</h2>
@@ -294,11 +341,33 @@
     <p class="nostalgic-line">"If only we could go back in time..."</p>
   </section>
 
+  <!-- Chatbot -->
+  <div id="chatbot-container">
+    <div id="chatbot-header">
+      <h3>School Assistant</h3>
+      <button id="chatbot-close-btn">&times;</button>
+    </div>
+    <div id="chatbot-body">
+      <div id="chatbot-messages">
+        <div class="message bot">Hello! How can I help you today?</div>
+      </div>
+    </div>
+    <div id="chatbot-input-container">
+      <input type="text" id="chatbot-input" placeholder="Type your message...">
+      <button id="chatbot-send-btn">Send</button>
+    </div>
+  </div>
+  <button id="chatbot-toggle-btn">
+    <i class="fas fa-comment"></i>
+  </button>
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2023 Saint Martha's Junior High School, Sreemangal. All rights reserved.</p>
     <div class="social-links">
       <a href="https://www.facebook.com/profile.php?id=100063787398602" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
 
