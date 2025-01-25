@@ -118,66 +118,123 @@ section {
   to { opacity: 1; transform: translateY(0); }
 }
 
-.program-list, .event-list, .gallery-images, .testimonial-list, .announcement-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+/* Student Dashboard Styles */
+.student-dashboard {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.program, .event, .testimonial, .announcement {
+.student-dashboard h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.marks-section, .routine-section {
   background: white;
   padding: 20px;
+  margin: 20px auto;
   border-radius: 10px;
-  width: 45%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
 }
 
-.gallery-images img {
-  width: 30%;
-  border-radius: 10px;
-  transition: transform 0.3s;
+.marks-section table, .routine-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
-.gallery-images img:hover {
-  transform: scale(1.05);
+.marks-section th, .marks-section td,
+.routine-section th, .routine-section td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-.contact-info {
+.marks-section th, .routine-section th {
+  background: #4CAF50;
+  color: white;
+}
+
+.marks-section tr:nth-child(even),
+.routine-section tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.marks-section tr:hover,
+.routine-section tr:hover {
+  background: #f1f1f1;
+}
+
+/* Teacher Profile Styles */
+.teacher-profile {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.teacher-profile h2 {
   margin-bottom: 20px;
+  color: #2c3e50;
 }
 
-.contact-info i {
-  margin-right: 10px;
-  color: #e67e22;
+.attendance-section, .routine-section {
+  background: white;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.attendance-section table, .routine-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
-form input, form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.attendance-section th, .attendance-section td,
+.routine-section th, .routine-section td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
-form button {
-  background: #e67e22;
+.attendance-section th, .routine-section th {
+  background: #4CAF50;
+  color: white;
+}
+
+.attendance-section tr:nth-child(even),
+.routine-section tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.attendance-section tr:hover,
+.routine-section tr:hover {
+  background: #f1f1f1;
+}
+
+.attendance-section input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.attendance-section button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #4CAF50;
   color: white;
   border: none;
-  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-form button:hover {
-  background: #d35400;
+.attendance-section button:hover {
+  background: #45a049;
 }
 
+/* Footer Styles */
 footer {
   background: rgba(44, 62, 80, 0.9);
   color: white;
@@ -200,316 +257,33 @@ footer {
   color: #f1c40f;
 }
 
-/* Admission Form Styles */
-.admission form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .logo h1 {
+    font-size: 1.5rem;
+  }
 
-.form-group {
-  margin-bottom: 15px;
-}
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+  .hero-content h2 {
+    font-size: 2rem;
+  }
 
-.form-group input, .form-group select, .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+  .hero-content p {
+    font-size: 1.2rem;
+  }
 
-.form-group textarea {
-  resize: vertical;
-  height: 100px;
-}
+  .marks-section, .routine-section,
+  .attendance-section, .routine-section {
+    padding: 15px;
+    margin: 10px;
+  }
 
-/* Resources Section Styles */
-.resource-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.resource {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.resource-icon {
-  font-size: 2rem;
-  color: #e67e22;
-  margin-bottom: 10px;
-}
-
-.resource ul {
-  list-style: none;
-  padding: 0;
-}
-
-.resource ul li {
-  margin: 10px 0;
-}
-
-.resource ul li a {
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s;
-}
-
-.resource ul li a:hover {
-  color: #e67e22;
-}
-
-.resource ul li i {
-  margin-right: 5px;
-}
-
-/* Batch Photo Section */
-.batch-photo {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.batch-photo img {
-  width: 100%;
-  max-width: 800px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.nostalgic-line {
-  font-style: italic;
-  color: #555;
-  margin-top: 20px;
-  font-size: 1.2rem;
-}
-
-/* Chatbot Styles */
-#chatbot-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  display: none;
-  flex-direction: column;
-  z-index: 1000;
-}
-
-#chatbot-container.active {
-  display: flex;
-}
-
-#chatbot-header {
-  background: #4CAF50;
-  color: white;
-  padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#chatbot-header h3 {
-  margin: 0;
-  font-size: 16px;
-}
-
-#chatbot-close-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#chatbot-body {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  max-height: 300px;
-}
-
-#chatbot-messages {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.message {
-  padding: 8px 12px;
-  border-radius: 10px;
-  max-width: 80%;
-}
-
-.message.user {
-  background: #4CAF50;
-  color: white;
-  align-self: flex-end;
-}
-
-.message.bot {
-  background: #f1f1f1;
-  color: #333;
-  align-self: flex-start;
-}
-
-#chatbot-input-container {
-  display: flex;
-  border-top: 1px solid #ccc;
-  padding: 10px;
-}
-
-#chatbot-input {
-  flex: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-#chatbot-send-btn {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  margin-left: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#chatbot-toggle-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Payment Options Styles */
-.payment-options {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 50px 20px;
-  text-align: center;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.payment-methods {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.payment-method {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 30%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.payment-method i {
-  font-size: 2rem;
-  color: #4CAF50;
-  margin-bottom: 10px;
-}
-
-.payment-method h3 {
-  margin: 10px 0;
-}
-
-.payment-method p {
-  margin: 0;
-  color: #555;
-}
-
-/* Contact Us Styles */
-.contact {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 50px 20px;
-  text-align: center;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info {
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  font-size: 1.1rem;
-}
-
-.contact-info i {
-  margin-right: 10px;
-  color: #4CAF50;
-}
-
-.contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.contact .form-group {
-  margin-bottom: 15px;
-}
-
-.contact .form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.contact .form-group input,
-.contact .form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact .form-group textarea {
-  resize: vertical;
-  height: 150px;
-}
-
-.contact button {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.contact button:hover {
-  background: #45a049;
+  .marks-section table, .routine-section table,
+  .attendance-section table, .routine-section table {
+    font-size: 0.9rem;
+  }
 }
